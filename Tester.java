@@ -7,9 +7,16 @@ public class Tester {
 
     b1.deposit(1.09);
     System.out.println("New balance: " + b1.getBalance());
-    System.out.println(b1.deposit(-100));
+    System.out.println("Negative Amount: " + b1.deposit(-100.0));
     System.out.println("New balance: " + b1.getBalance());
-    System.out.println(b1.deposit(1000.0));
+    System.out.println("$30 Deposit: " + b1.deposit(30.0));
+    System.out.println("New balance: " + b1.getBalance());
+    System.out.println();
+    System.out.println("Sufficient balance: "+ b1.withdraw(10.0));
+    System.out.println("New balance: " + b1.getBalance());
+    System.out.println("Too large: " + b1.withdraw(2000.0));
+    System.out.println("New balance: " + b1.getBalance());
+    System.out.println("Negative Amount: " + b1.withdraw(-1.0));
     System.out.println("New balance: " + b1.getBalance());
   }
 }
