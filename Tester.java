@@ -18,5 +18,7 @@ public class Tester {
     System.out.println("New balance: " + b1.getBalance());
     System.out.println("Negative Amount: " + b1.withdraw(-1.0));
     System.out.println("New balance: " + b1.getBalance());
+    System.out.println();
+    System.out.println(b1.toString());
   }
 }
