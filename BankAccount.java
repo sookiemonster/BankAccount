@@ -7,7 +7,7 @@ public class BankAccount {
   public BankAccount(int id, String ps) {
     accountID = id;
     password = ps;
-    balance = 0.00;
+    balance = 0.0;
   }
 
   public double getBalance() {
@@ -17,4 +17,9 @@ public class BankAccount {
   public int getAccountID() {
     return accountID;
   }
+
+  public void setPassword(String newPass) {
+    password = newPass;
+  }
+
 }

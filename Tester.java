@@ -3,5 +3,6 @@ public class Tester {
     BankAccount b1 = new BankAccount(123, "Pass");
     System.out.println("Balance: " + b1.getBalance());
     System.out.println("ID: " + b1.getAccountID());
+    b1.setPassword("BruhMoment");
   }
 }
