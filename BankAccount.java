@@ -5,9 +5,9 @@ public class BankAccount {
   private String password;
 
   public BankAccount(int id, String ps) {
-    accountID = id;
-    password = ps;
-    balance = 0.0;
+    this.accountID = id;
+    this.password = ps;
+    this.balance = 0.0;
   }
 
   public double getBalance() {
@@ -41,7 +41,11 @@ public class BankAccount {
   }
 
   public String toString() {
-    return accountID + "\t" + balance;
+    return "#" + accountID + "\t$" + balance;
+  }
+
+  private boolean authenticate(String password) {
+    return this.password.equals(password);
   }
 
 }
