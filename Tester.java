@@ -1,6 +1,7 @@
 public class Tester {
   public static void main(String[] args) {
     BankAccount b1 = new BankAccount(123, "Pass");
+    BankAccount b2 = new BankAccount(456, "Pass");
     System.out.println("Balance: " + b1.getBalance());
     System.out.println("ID: " + b1.getAccountID());
 
@@ -21,5 +22,18 @@ public class Tester {
     System.out.println("New balance: " + b1.getBalance());
     System.out.println();
     System.out.println(b1);
+    System.out.println(b2);
+    System.out.println("Transfer: " + b1.transferTo(b2, 21.09, "BruhMoment"));
+    System.out.println("b1: " + b1);
+    System.out.println("b2: " + b2);
+    System.out.println("Transfer: " + b2.transferTo(b1, 10.00, "BruhMoment"));
+    System.out.println("b1: " + b1);
+    System.out.println("b2: " + b2);
+    System.out.println("Transfer: " + b2.transferTo(b1, 10.00, "Pass"));
+    System.out.println("b1: " + b1);
+    System.out.println("b2: " + b2);
+    System.out.println("Transfer: " + b2.transferTo(b1, 22.00, "Pass"));
+    System.out.println("b1: " + b1);
+    System.out.println("b2: " + b2);
   }
 }

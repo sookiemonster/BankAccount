@@ -26,26 +26,36 @@ public class BankAccount {
     if (amount < 0) {
       return false;
     } else {
-      balance += amount;
+      this.balance += amount;
       return true;
     }
   }
 
   public boolean withdraw(double amount) {
-    if (amount > balance || amount < 0) {
+    if (amount > this.balance || amount < 0) {
       return false;
     } else {
-      balance -= amount;
+      this.balance -= amount;
       return true;
     }
   }
 
   public String toString() {
-    return "#" + accountID + "\t$" + balance;
+    return "#" + this.accountID + "\t$" + this.balance;
   }
 
   private boolean authenticate(String password) {
     return this.password.equals(password);
   }
 
+  public boolean transferTo(BankAccount other, double amount, String password) {
+    if (authenticate(password) && withdraw(amount) ) {
+      if (other.deposit(amount)) {
+        return true;
+      } else {
+        System.out.println("ERROR");
+      }
+    }
+    return false;
+  }
 }
